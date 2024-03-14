@@ -55,10 +55,11 @@ public class BoundaryEmmenager {
 	}
 	
 	private void emmenagerGalois(String nomVisiteur) {
+		System.out.print("Bienvenue villegeois " + nomVisiteur);
 		StringBuilder chaine = new StringBuilder();
-		chaine.append("Bienvenue villegeois ");
-		chaine.append(nomVisiteur);
-		System.out.println(chaine.toString());
+//		chaine.append("Bienvenue villegeois ");
+//		chaine.append(nomVisiteur);
+//		System.out.println(chaine.toString());
 		StringBuilder questionGaulois = new StringBuilder();
 		questionGaulois.append("\nQuelle est votre force ?\n");
 		System.out.println(chaine.toString());
