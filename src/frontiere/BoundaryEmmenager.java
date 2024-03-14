@@ -58,8 +58,10 @@ public class BoundaryEmmenager {
 		StringBuilder chaine = new StringBuilder();
 		chaine.append("Bienvenue villegeois ");
 		chaine.append(nomVisiteur);
+		System.out.println(chaine.toString());
 		StringBuilder questionGaulois = new StringBuilder();
 		questionGaulois.append("\nQuelle est votre force ?\n");
+		System.out.println(chaine.toString());
 		int force = Clavier.entrerEntier(questionGaulois.toString());
 		controlEmmenager.ajouterGaulois(nomVisiteur, force);
 	}
