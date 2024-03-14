@@ -9,8 +9,6 @@ public class ControlLibererEtal {
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 
-	//TODO a completer
-
 	/**
 	 * 
 	 * @param produit
