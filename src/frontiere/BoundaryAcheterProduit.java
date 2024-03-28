@@ -22,7 +22,7 @@ public class BoundaryAcheterProduit {
 		}
 		int indiceVendeur = scan.nextInt();
 		indiceVendeur--;
-		
+
 		if (controlAcheterProduit.verifierIdentite(marchands[indiceVendeur])) {
 			System.out.println(nomAcheteur + " se déplace jusqu'à l'étal du vendeur " + marchands[indiceVendeur]
 					+ "\nBonjour " + nomAcheteur + "\nCombien de " + produit + " voulez-vous acheter ?\n");
