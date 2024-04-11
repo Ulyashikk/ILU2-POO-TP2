@@ -5,26 +5,31 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import personnages.Chef;
 import villagegaulois.Village;
 
 class ControlAfficherMarcheTest {
-
 	private Village village;
+	private Chef abraracourcix;
+	
 	@BeforeEach
 	public void initialiserSituation() {
 		System.out.println("Initialisation...");
-		village = new Village("le village des irréductibles", 10, 5);
+		village = new Village("le village des irr�ductibles", 10, 5);
+		abraracourcix = new Chef("Abraracourcix", 10, village);
+		village.setChef(abraracourcix);		
+	}
+	@Test
+	void testControlAfficherMarche() {
+		ControlAfficherMarche controlAfficherMarche = new ControlAfficherMarche(village);
+		assertNotNull(controlAfficherMarche);
 	}
 
 	@Test
-	void testControlAfficherMarche() {
-		ControlAfficherMarche ControlAfficherMarche = new ControlAfficherMarche(village);
-		assertNotNull(ControlAfficherMarche, "Constructeur ne renvoie pas null");
-	}
-	
-	@Test
-	void testdonnerinfosMarche() {
-		//charger des donnees et tester
+	void testDonnerInfosMarche() {
+		ControlAfficherMarche controlAfficherMarche = new ControlAfficherMarche(village);
+		String[] infosMarche = controlAfficherMarche.donnerinfosMarche();
+		System.out.println("infos marche : "+infosMarche);
 	}
 
 }
